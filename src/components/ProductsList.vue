@@ -32,6 +32,9 @@ import {mapActions} from 'vuex'
 export default {
   name: "ProductsList",
   computed: {
+    ...mapGetters("products", {
+      products: 'items',
+    }),
     ...mapGetters("cart", {
       inCart: 'products'
     })
